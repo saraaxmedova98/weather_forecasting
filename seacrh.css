@@ -1,0 +1,201 @@
+.search {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all .3s ease .6s;
+    transition: all .3s ease .6s;
+    box-shadow: 0 3px 14px -1px rgba(0, 0, 0, 0.18);
+}
+
+.search svg {
+    cursor: pointer;
+    margin: 20px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    color: #000;
+    stroke-width: 2;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: all .3s ease .6s;
+    transition: all .3s ease .6s;
+}
+
+.search>div {
+    position: relative;
+    width: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15) 0.5s;
+    transition: all 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15) 0.5s;
+}
+
+.search>div input {
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0 24px 0 0;
+    border: 0;
+    display: block;
+    outline: none;
+    font-family: inherit;
+    position: absolute;
+    line-height: 20px;
+    font-size: 16px;
+    background: #fff;
+    -webkit-appearance: none;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    -webkit-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+}
+
+.search>div input::-webkit-input-placeholder {
+    color: #000;
+}
+
+.search>div input:-moz-placeholder {
+    color: #000;
+}
+
+.search>div input::-moz-placeholder {
+    color: #000;
+}
+
+.search>div input:-ms-input-placeholder {
+    color: #000;
+}
+
+.search>div>div {
+    white-space: nowrap;
+    color: #000;
+    display: -webkit-box;
+    display: flex;
+}
+
+.search>div>div span {
+    line-height: 20px;
+    font-size: 16px;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    -webkit-transform: translate(0, 12px);
+    transform: translate(0, 12px);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.search>div>div span:nth-child(1) {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.search>div>div span:nth-child(2) {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+.search>div>div span:nth-child(3) {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.search.open {
+    cursor: default;
+    border-radius: 8px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    box-shadow: 0 10px 36px -2px rgba(0, 0, 0, 0.18);
+}
+
+.search.open svg {
+    opacity: .4;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.search.open>div {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    width: 200px;
+}
+
+.search.open>div>div span {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.search.open>div>div span:nth-child(1) {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.search.open>div>div span:nth-child(2) {
+    -webkit-transition-delay: .45s;
+    transition-delay: .45s;
+}
+
+.search.open>div>div span:nth-child(3) {
+    -webkit-transition-delay: .50s;
+    transition-delay: .50s;
+}
+
+.search.open>div input {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: .75s;
+    transition-delay: .75s;
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Roboto, Arial;
+    color: #ADAFB6;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #fff;
+}
+
+body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+    opacity: .5;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+body .dribbble:hover {
+    opacity: 1;
+}
+
+body .dribbble img {
+    display: block;
+    height: 36px;
+}
